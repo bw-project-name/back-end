@@ -18,12 +18,12 @@
 
 ## Table of Contents
 
-- [Register](#register-a-user) (POST)
-- [Login](#login) (POST)
-- [User Data](#get-all-users) (GET)
-- [User Data by ID](#get-user-by-id) (GET)
-- [Update User by ID](#update-user-information) (PUT)
-- [Delete User](#delete-a-user) (DELETE)
+- [Register](#register-a-user) (_POST_)
+- [Login](#login) (_POST_)
+- [User Data](#get-all-users) (_GET_)
+- [User Data by ID](#get-user-by-id) (_GET_)
+- [Update User by ID](#update-user-information) (_PUT_)
+- [Delete User](#delete-a-user) (_DELETE_)
 
 # User Routes
 
