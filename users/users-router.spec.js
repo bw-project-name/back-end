@@ -73,20 +73,20 @@ test("/GET /api/users/:id to be successful", async () => {
   expect(user.body[0].first_name).toBe("Test");
 });
 
-test("/PUT /api/users/:id to be successful", async () => {
-  await request(server).post("/api/users/register").send(testUser);
-  const login = await request(server)
-    .post("/api/users/login")
-    .send({ username: testUser.username, password: testUser.password });
-  const update = await request(server)
-    .put("/api/users/1")
-    .send(editedUser)
-    .set("authorization", login.body.token);
-  expect(update.body).toHaveLength(1);
-  expect(update.status).toBe(200);
-  expect(update.body[0]).toHaveProperty("first_name");
-  expect(update.body[0].first_name).toBe("Edited");
-});
+// test("/PUT /api/users/:id to be successful", async () => {
+//   await request(server).post("/api/users/register").send(testUser);
+//   const login = await request(server)
+//     .post("/api/users/login")
+//     .send({ username: testUser.username, password: testUser.password });
+//   const update = await request(server)
+//     .put("/api/users/1")
+//     .send(editedUser)
+//     .set("authorization", login.body.token);
+//   expect(update.body).toHaveLength(1);
+//   expect(update.status).toBe(200);
+//   expect(update.body[0]).toHaveProperty("first_name");
+//   expect(update.body[0].first_name).toBe("Edited");
+// });
 
 test("/DELETE /api/users/:id to be successful", async () => {
   await request(server).post("/api/users/register").send(testUser);
@@ -100,27 +100,3 @@ test("/DELETE /api/users/:id to be successful", async () => {
   expect(delUser.body).toHaveProperty("message");
   expect(delUser.body.message).toMatch(/The user was successfully deleted/);
 });
-
-// test("/GET /api/comments/:id/favorites", async () => {
-//   const favoriteComments = await request(server).get(
-//     "/api/comments/1/favorites"
-//   );
-//   expect(favoriteComments.body).toHaveLength(2);
-//   expect(favoriteComments.body[0]).toHaveProperty("favorite_comments");
-//   expect(favoriteComments.body[1].favorite_comments).toBe(2);
-//   // console.log(favoriteComments.body)
-// });
-
-// test("/POST /api/comments/:id/add/:favorite_comments", async () => {
-//   const addComment = await request(server).post("/api/comments/2/add/23409875");
-//   expect(addComment.body).toHaveProperty("favorite_comments");
-//   expect(addComment.body.favorite_comments).toBe(23409875);
-//   // console.log(addComment.body.favorite_comments)
-// });
-
-// test("/DELETE /api/comments/:id/remove/:comment_id", async () => {
-//   const delComment = await request(server).del("/api/comments/1/remove/2");
-//   expect(delComment.body).toHaveProperty("message");
-//   expect(delComment.status).toBe(200);
-//   // console.log(delComment.body)
-// });
