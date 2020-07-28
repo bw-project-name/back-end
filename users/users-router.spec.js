@@ -9,6 +9,13 @@ const testUser = {
   password: "test",
 };
 
+const editedUser = {
+  first_name: "Edited",
+  last_name: "Edited",
+  username: "edited",
+  password: "edited",
+};
+
 afterEach(async () => {
   await db("users").truncate();
 });
@@ -73,12 +80,7 @@ test("/PUT /api/users/:id to be successful", async () => {
     .send({ username: testUser.username, password: testUser.password });
   const update = await request(server)
     .put("/api/users/1")
-    .send({
-      first_name: "Edited",
-      last_name: "Edited",
-      username: "edited",
-      password: "edited",
-    })
+    .send(editedUser)
     .set("authorization", login.body.token);
   expect(update.body).toHaveLength(1);
   expect(update.status).toBe(200);
@@ -86,13 +88,18 @@ test("/PUT /api/users/:id to be successful", async () => {
   expect(update.body[0].first_name).toBe("Edited");
 });
 
-// test("/DELETE /api/users/:id to be successful", async () => {
-//   const delUser = await request(server).delete("/api/users/2");
-//   expect(delUser.status).toBe(200);
-//   expect(delUser.body).toHaveProperty("message");
-//   expect(delUser.body.message).toMatch(/The user was successfully deleted!/);
-//   // console.log(delUser.body)
-// });
+test("/DELETE /api/users/:id to be successful", async () => {
+  await request(server).post("/api/users/register").send(testUser);
+  const login = await request(server)
+    .post("/api/users/login")
+    .send({ username: testUser.username, password: testUser.password });
+  const delUser = await request(server)
+    .delete("/api/users/1")
+    .set("authorization", login.body.token);
+  expect(delUser.status).toBe(200);
+  expect(delUser.body).toHaveProperty("message");
+  expect(delUser.body.message).toMatch(/The user was successfully deleted/);
+});
 
 // test("/GET /api/comments/:id/favorites", async () => {
 //   const favoriteComments = await request(server).get(
