@@ -15,7 +15,7 @@ function addFavorite(id, favorite_songs) {
   return db("favorites")
     .insert({ favorite_songs: favorite_songs, user_id: id })
     .then((id) => {
-      return findComment(id[0]);
+      return findFavorite(id[0]);
     });
 }
 

@@ -1,11 +1,13 @@
 const router = require("express").Router();
 
-const Comments = require("./favorites-model");
+const Favorites = require("./favorites-model");
 
-router.get("/:id/favorites", (req, res) => {
+const { validateId } = require("../middleware/index");
+
+router.get("/:id/", validateId, (req, res) => {
   const { id } = req.params;
 
-  Comments.getFavorites(id)
+  Favorites.getFavorites(id)
     .then((response) => {
       res.status(200).json(response);
     })
@@ -14,11 +16,11 @@ router.get("/:id/favorites", (req, res) => {
     });
 });
 
-router.post("/:id/add/:song", (req, res) => {
+router.post("/:id/add/:song", validateId, (req, res) => {
   const { id } = req.params;
   const { song } = req.params;
 
-  Comments.addFavorite(id, song)
+  Favorites.addFavorite(id, song)
     .then(([response]) => {
       res.status(201).json(response);
     })
@@ -31,9 +33,13 @@ router.delete("/:id/remove/:song_id", (req, res) => {
   const { id } = req.params;
   const { song_id } = req.params;
 
-  Comments.removeFavorite(id, song_id)
+  Favorites.removeFavorite(id, song_id)
     .then((response) => {
-      res.status(200).json({ message: "The song was successfully deleted" });
+      res
+        .status(200)
+        .json({
+          message: "The song was successfully removed from your favorites",
+        });
     })
     .catch((error) => {
       res.status(500).json({ errorMessage: error });

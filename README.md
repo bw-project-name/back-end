@@ -18,12 +18,17 @@
 
 ## Table of Contents
 
-- [Register](#register-a-user) (_POST_)
-- [Login](#login) (_POST_)
-- [User Data](#get-all-users) (_GET_)
-- [User Data by ID](#get-user-by-id) (_GET_)
-- [Update User by ID](#update-user-information) (_PUT_)
-- [Delete User](#delete-a-user) (_DELETE_)
+- [User Routes](#user-routes)
+  - [Register](#register-a-user) (_POST_)
+  - [Login](#login) (_POST_)
+  - [User Data](#get-all-users) (_GET_)
+  - [User Data by ID](#get-user-by-id) (_GET_)
+  - [Update User by ID](#update-user-information) (_PUT_)
+  - [Delete User](#delete-a-user) (_DELETE_)
+- [Favorites Routes](#favorites-routes)
+  - [Favorites Data by ID](#get-all-favorites-by-user-id) (_GET_)
+  - [Add Song to Favorites](#add-song-to-favorites) (_POST_)
+  - [Delete Favorite](#delete-a-favorite) (_DELETE_)
 
 # User Routes
 
@@ -367,6 +372,158 @@
 ```javascript
 {
     "message": "The user was successfully deleted"
+}
+
+```
+
+> Will receive a **400 (Bad Request)** response if connecting client does not have an Authorization token in its headers
+
+```javascript
+{
+    "message": "Please log in"
+}
+```
+
+> Will receive a **401 (Unauthorized)** response if credentials are invalid or expired
+
+```javascript
+{
+  "message": "Token invalid. Please log in and get a new token"
+}
+```
+
+> Will receive a **404 (Not Found)** response if parameter ID is invalid
+
+```javascript
+{
+  "message": "User ${id} could not be found"
+}
+```
+
+> Will receive a **500 (Internal Server Error)** response if there is an issue with the API server
+
+```javascript
+{
+  "error": "Server error information"
+}
+```
+
+---
+
+# Favorites Routes
+
+### GET ALL FAVORITES BY USER ID
+
+**GET**: `/api/favorites/:id`
+
+#### Responses:
+
+> Will receive a **200 (OK)** response with an array of objects containing the requested user's favorites
+
+```javascript
+[
+    {
+        "favorite_songs": Song ID here
+    },
+    {
+        "favorite_songs": Song ID here
+    }
+]
+```
+
+> Will receive a **400 (Bad Request)** response if connecting client does not have an Authorization token in its headers
+
+```javascript
+{
+    "message": "Please log in"
+}
+```
+
+> Will receive a **401 (Unauthorized)** response if credentials are invalid or expired
+
+```javascript
+{
+  "message": "Token invalid. Please log in and get a new token"
+}
+```
+
+> Will receive a **404 (Not Found)** response if parameter ID is invalid
+
+```javascript
+{
+  "message": "User ${id} could not be found"
+}
+```
+
+> Will receive a **500 (Internal Server Error)** response if there is an issue with the API server
+
+```javascript
+{
+  "errorMessage": "Server error information"
+}
+```
+
+---
+
+### ADD SONG TO FAVORITES
+
+**POST**: `/api/favorites/:id/add/:song`
+
+#### Responses:
+
+> Will receive a **201 (Created)** response along with an object containing the newly added favorite song
+
+```javascript
+{
+    "favorite_songs": Song ID here
+}
+```
+
+> Will receive a **400 (Bad Request)** response if connecting client does not have an Authorization token in its headers
+
+```javascript
+{
+    "message": "Please log in"
+}
+```
+
+> Will receive a **401 (Unauthorized)** response if credentials are invalid or expired
+
+```javascript
+{
+  "message": "Token invalid. Please log in and get a new token"
+}
+```
+
+> Will receive a **404 (Not Found)** response if parameter ID is invalid
+
+```javascript
+{
+  "message": "User ${id} could not be found"
+}
+```
+
+> Will receive a **500 (Internal Server Error)** response if there is an issue with the API server
+
+```javascript
+{
+  "errorMessage": "Server error information"
+}
+```
+
+---
+
+### DELETE A FAVORITE
+
+**DELETE**: `/api/favorites/:id/remove/:song_id`
+
+#### Responses:
+
+> Will receive a **200 (OK)** response if the favorite is deleted successfully
+
+```javascript
+{
+    "message": "The song was successfully removed from your favorites"
 }
 
 ```
