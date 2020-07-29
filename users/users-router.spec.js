@@ -73,20 +73,20 @@ test("/GET /api/users/:id to be successful", async () => {
   expect(user.body[0].first_name).toBe("Test");
 });
 
-// test("/PUT /api/users/:id to be successful", async () => {
-//   await request(server).post("/api/users/register").send(testUser);
-//   const login = await request(server)
-//     .post("/api/users/login")
-//     .send({ username: testUser.username, password: testUser.password });
-//   const update = await request(server)
-//     .put("/api/users/1")
-//     .send(editedUser)
-//     .set("authorization", login.body.token);
-//   expect(update.body).toHaveLength(1);
-//   expect(update.status).toBe(200);
-//   expect(update.body[0]).toHaveProperty("first_name");
-//   expect(update.body[0].first_name).toBe("Edited");
-// });
+test("/PUT /api/users/:id to be successful", async () => {
+  await request(server).post("/api/users/register").send(testUser);
+  const login = await request(server)
+    .post("/api/users/login")
+    .send({ username: testUser.username, password: testUser.password });
+  const update = await request(server)
+    .put("/api/users/1")
+    .send(editedUser)
+    .set("authorization", login.body.token);
+  expect(update.body).toHaveLength(1);
+  expect(update.status).toBe(200);
+  expect(update.body[0]).toHaveProperty("first_name");
+  expect(update.body[0].first_name).toBe("Edited");
+});
 
 test("/DELETE /api/users/:id to be successful", async () => {
   await request(server).post("/api/users/register").send(testUser);
