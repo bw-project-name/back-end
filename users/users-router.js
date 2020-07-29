@@ -31,7 +31,6 @@ router.get("/:id", authenticator, validateId, (req, res) => {
     });
 });
 
-
 router.post("/register", validateUser, (req, res) => {
   const user = req.body;
   const rounds = process.env.BCRYPT_ROUNDS || 8;
@@ -54,8 +53,9 @@ router.post("/login", validateLogin, (req, res) => {
   Users.findByUsers({ username }).then(([response]) => {
     if (response && bcryptjs.compareSync(password, response.password)) {
       const token = createToken(response);
+      const id = response.id;
 
-      res.status(200).json({ message: "Welcome to our API", token });
+      res.status(200).json({ message: "Welcome to our API", token, id: id });
     } else {
       res.status(401).json({ message: "Access Denied: Unauthorized" });
     }
