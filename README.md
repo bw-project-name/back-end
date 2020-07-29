@@ -1,14 +1,29 @@
 # Spotify Song Suggester API
 
+<img src="https://img.shields.io/badge/made%20by-iatechristmas-blue?style=flat-square&logo=visual-studio-code"/>
+<p>
+<img src="https://img.shields.io/badge/bcrypt-2.4.3-blue"/>
+<img src="https://img.shields.io/badge/cors-2.8.5-blue"/>
+<img src="https://img.shields.io/badge/cross--env-7.0.2-blue"/>
+<img src="https://img.shields.io/badge/dotenv-8.2.0-blue"/>
+<img src="https://img.shields.io/badge/express-4.17.1-blue"/>
+<img src="https://img.shields.io/badge/helmet-3.23.3-blue"/>
+<img src="https://img.shields.io/badge/jest-26.1.0-blue"/>
+<img src="https://img.shields.io/badge/jsonwebtoken-8.5.1-blue"/>
+<img src="https://img.shields.io/badge/knex-0.21.2-blue"/>
+<img src="https://img.shields.io/badge/knex--cleaner-1.3.0-blue"/>
+<img src="https://img.shields.io/badge/nodemon-2.0.4-blue"/>
+<img src="https://img.shields.io/badge/pg-8.3.0-blue"/>
+<img src="https://img.shields.io/badge/sqlite3-5.0.0-blue"/>
+<img src="https://img.shields.io/badge/supertest-4.0.2-blue"/>
+
 ## API BASE URL
 
-[`https://bwft-spotify-song-suggester.herokuapp.com/`](https://bwft-spotify-song-suggester.herokuapp.com/)
+<a href="https://bwft-spotify-song-suggester.herokuapp.com/"><img src="https://img.shields.io/badge/-https%3A%2F%2Fbwft--spotify--song--suggester.herokuapp.com%2F-brightgreen?style=flat-square"/></a>
 
 ### SERVER STATUS
 
-**GET**: `/`
-
-> When active, will respond with the following
+<img src="https://img.shields.io/badge/GET%3A%20%2F-When%20active%2C%20will%20respond%20with%20the%20following%3A-green?style=flat-square"/>
 
 ```javascript
 {
@@ -34,7 +49,7 @@
 
 ### REGISTER A USER
 
-**POST**: `/api/users/register`
+<img src="https://img.shields.io/badge/POST%3A%20-%2Fapi%2Fusers%2Fregister-green?style=flat-square"/>
 
 #### Body
 
@@ -109,7 +124,7 @@
 
 ### LOGIN
 
-**POST**: `/api/users/login`
+<img src="https://img.shields.io/badge/POST%3A-%2Fapi%2Fusers%2Flogin-green?style=flat-square"/>
 
 #### Body
 
@@ -166,7 +181,7 @@
 
 ### GET ALL USERS
 
-**GET**: `/api/users`
+<img src="https://img.shields.io/badge/GET%3A%20-%2Fapi%2Fusers-green?style=flat-square"/>
 
 #### Responses:
 
@@ -217,7 +232,7 @@
 
 ### GET USER BY ID
 
-**GET**: `/api/users/:id`
+<img src="https://img.shields.io/badge/GET%3A-%2Fapi%2Fusers%2F%3Aid-green?style=flat-square"/>
 
 #### Responses:
 
@@ -268,7 +283,7 @@
 
 ### UPDATE USER INFORMATION
 
-**PUT**: `/api/users/:id`
+<img src="https://img.shields.io/badge/PUT%3A%20-%2Fapi%2Fusers%2F%3Aid-green?style=flat-square"/>
 
 #### Body
 
@@ -363,7 +378,7 @@
 
 ### DELETE A USER
 
-**DELETE**: `/api/users/:id`
+<img src="https://img.shields.io/badge/DELETE%3A-%2Fapi%2Fusers%2F%3Aid-green?style=flat-square"/>
 
 #### Responses:
 
@@ -414,7 +429,7 @@
 
 ### GET ALL FAVORITES BY USER ID
 
-**GET**: `/api/favorites/:id`
+<img src="https://img.shields.io/badge/GET%3A-%2Fapi%2Ffavorites%2F%3Aid-green?style=flat-square"/>
 
 #### Responses:
 
@@ -467,7 +482,7 @@
 
 ### ADD SONG TO FAVORITES
 
-**POST**: `/api/favorites/:id/add/:song`
+<img src="https://img.shields.io/badge/POST%3A-%2Fapi%2Ffavorites%2F%3Aid%2Fadd%2F%3Asong-green?style=flat-square"/>
 
 #### Responses:
 
@@ -515,7 +530,7 @@
 
 ### DELETE A FAVORITE
 
-**DELETE**: `/api/favorites/:id/remove/:song_id`
+<img src="https://img.shields.io/badge/DELETE%3A-%2Fapi%2Ffavorites%2F%3Aid%2Fremove%2F%3Asong__id-green?style=flat-square"/>
 
 #### Responses:
 
