@@ -2,7 +2,30 @@
 
 [![madeby](https://img.shields.io/badge/made%20by-iatechristmas-blue?logo=visual-studio-code)](https://github.com/iatechristmas)
 
+<!-- ![social](https://img.shields.io/github/followers/iatechristmas?style=social) -->
+
 ---
+
+## Installation
+
+```
+npm install
+```
+>Then
+
+```
+npm run server 
+```
+
+>Or
+
+```
+npm run start
+```
+
+---
+
+## Dependencies
 
 [![express](https://nodei.co/npm/express.png)](https://github.com/expressjs/express)
 
