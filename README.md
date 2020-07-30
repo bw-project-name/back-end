@@ -1,30 +1,34 @@
 # Spotify Song Suggester API
 
-<img src="https://img.shields.io/badge/made%20by-iatechristmas-blue?style=flat-square&logo=visual-studio-code" unselectable="on"/>
-<p>
-<img src="https://img.shields.io/badge/bcrypt-2.4.3-blue"/>
-<img src="https://img.shields.io/badge/cors-2.8.5-blue"/>
-<img src="https://img.shields.io/badge/cross--env-7.0.2-blue"/>
-<img src="https://img.shields.io/badge/dotenv-8.2.0-blue"/>
-<img src="https://img.shields.io/badge/express-4.17.1-blue"/>
-<img src="https://img.shields.io/badge/helmet-3.23.3-blue"/>
-<img src="https://img.shields.io/badge/jest-26.1.0-blue"/>
-<img src="https://img.shields.io/badge/jsonwebtoken-8.5.1-blue"/>
-<img src="https://img.shields.io/badge/knex-0.21.2-blue"/>
-<img src="https://img.shields.io/badge/knex--cleaner-1.3.0-blue"/>
-<img src="https://img.shields.io/badge/nodemon-2.0.4-blue"/>
-<img src="https://img.shields.io/badge/pg-8.3.0-blue"/>
-<img src="https://img.shields.io/badge/sqlite3-5.0.0-blue"/>
-<img src="https://img.shields.io/badge/supertest-4.0.2-blue"/>
-</p>
+[![madeby](https://img.shields.io/badge/made%20by-iatechristmas-blue?logo=visual-studio-code)](https://github.com/iatechristmas)
 
-## API BASE URL
+---
 
-<a href="https://bwft-spotify-song-suggester.herokuapp.com/"><img src="https://img.shields.io/badge/-https%3A%2F%2Fbwft--spotify--song--suggester.herokuapp.com%2F-brightgreen?style=flat-square"/></a>
+[![express](https://nodei.co/npm/express.png)](https://github.com/expressjs/express)
+
+[![bcryptjs](https://img.shields.io/badge/bcryptjs-2.4.3-blue)](https://www.npmjs.com/package/bcryptjs)
+[![cors](https://img.shields.io/badge/cors-2.8.5-blue)](https://github.com/expressjs/cors)
+[![cross-env](https://img.shields.io/badge/cross--env-7.0.2-blue)](https://github.com/kentcdodds/cross-env)
+[![dotenv](https://img.shields.io/badge/dotenv-8.2.0-blue)](https://github.com/motdotla/dotenv)
+[![helmet](https://img.shields.io/badge/helmet-3.23.3-blue)](https://github.com/helmetjs/helmet)
+[![jest](https://img.shields.io/badge/jest-26.1.0-blue)](https://github.com/facebook/jest)
+[![jsonwebtoken](https://img.shields.io/badge/jsonwebtoken-8.5.1-blue)](https://github.com/auth0/node-jsonwebtoken)
+[![knex](https://img.shields.io/badge/knex-0.21.2-blue)](https://github.com/knex/knex)
+[![knex-cleaner](https://img.shields.io/badge/knex--cleaner-1.3.0-blue)](https://github.com/steven-ferguson/knex-cleaner)
+[![nodemon](https://img.shields.io/badge/nodemon-2.0.4-blue)](https://github.com/remy/nodemon)
+[![pg](https://img.shields.io/badge/pg-8.3.0-blue)](https://github.com/brianc/node-postgres)
+[![sqlite3](https://img.shields.io/badge/sqlite3-5.0.0-blue)](https://github.com/mapbox/node-sqlite3)
+[![supertest](https://img.shields.io/badge/supertest-4.0.2-blue)](https://github.com/visionmedia/supertest)
+
+---
+
+[![baseurl](https://img.shields.io/badge/API%20BASE%20URL%3A%20-https%3A%2F%2Fbwft--spotify--song--suggester.herokuapp.com%2F-brightgreen)](https://bwft-spotify-song-suggester.herokuapp.com/)
+
+---
 
 ### SERVER STATUS
 
-<img src="https://img.shields.io/badge/GET%3A%20%2F-When%20active%2C%20will%20respond%20with%20the%20following%3A-green?style=flat-square"/>
+![serverstatus](https://img.shields.io/badge/GET%3A%20%2F-When%20active%2C%20will%20respond%20with%20the%20following%3A-green)
 
 ```javascript
 {
@@ -50,7 +54,7 @@
 
 ### REGISTER A USER
 
-<img src="https://img.shields.io/badge/POST%3A%20-%2Fapi%2Fusers%2Fregister-green?style=flat-square"/>
+![registerauser](https://img.shields.io/badge/POST%3A%20-%2Fapi%2Fusers%2Fregister-green)
 
 #### Body
 
@@ -125,7 +129,7 @@
 
 ### LOGIN
 
-<img src="https://img.shields.io/badge/POST%3A-%2Fapi%2Fusers%2Flogin-green?style=flat-square"/>
+![loginuser](https://img.shields.io/badge/POST%3A-%2Fapi%2Fusers%2Flogin-green)
 
 #### Body
 
@@ -182,7 +186,7 @@
 
 ### GET ALL USERS
 
-<img src="https://img.shields.io/badge/GET%3A%20-%2Fapi%2Fusers-green?style=flat-square"/>
+![getallusers](https://img.shields.io/badge/GET%3A%20-%2Fapi%2Fusers-green)
 
 #### Responses:
 
@@ -233,7 +237,7 @@
 
 ### GET USER BY ID
 
-<img src="https://img.shields.io/badge/GET%3A-%2Fapi%2Fusers%2F%3Aid-green?style=flat-square"/>
+![getuserbyid](https://img.shields.io/badge/GET%3A-%2Fapi%2Fusers%2F%3Aid-green)
 
 #### Responses:
 
@@ -284,7 +288,7 @@
 
 ### UPDATE USER INFORMATION
 
-<img src="https://img.shields.io/badge/PUT%3A%20-%2Fapi%2Fusers%2F%3Aid-green?style=flat-square"/>
+![updateuser](https://img.shields.io/badge/PUT%3A%20-%2Fapi%2Fusers%2F%3Aid-green)
 
 #### Body
 
@@ -379,7 +383,7 @@
 
 ### DELETE A USER
 
-<img src="https://img.shields.io/badge/DELETE%3A-%2Fapi%2Fusers%2F%3Aid-green?style=flat-square"/>
+![deleteuser](https://img.shields.io/badge/DELETE%3A-%2Fapi%2Fusers%2F%3Aid-green)
 
 #### Responses:
 
@@ -430,7 +434,7 @@
 
 ### GET ALL FAVORITES BY USER ID
 
-<img src="https://img.shields.io/badge/GET%3A-%2Fapi%2Ffavorites%2F%3Aid-green?style=flat-square"/>
+![getfavorites](https://img.shields.io/badge/GET%3A-%2Fapi%2Ffavorites%2F%3Aid-green)
 
 #### Responses:
 
@@ -483,7 +487,7 @@
 
 ### ADD SONG TO FAVORITES
 
-<img src="https://img.shields.io/badge/POST%3A-%2Fapi%2Ffavorites%2F%3Aid%2Fadd%2F%3Asong-green?style=flat-square"/>
+![addfavorite](https://img.shields.io/badge/POST%3A-%2Fapi%2Ffavorites%2F%3Aid%2Fadd%2F%3Asong-green)
 
 #### Responses:
 
@@ -531,7 +535,7 @@
 
 ### DELETE A FAVORITE
 
-<img src="https://img.shields.io/badge/DELETE%3A-%2Fapi%2Ffavorites%2F%3Aid%2Fremove%2F%3Asong__id-green?style=flat-square"/>
+![deletefavorite](https://img.shields.io/badge/DELETE%3A-%2Fapi%2Ffavorites%2F%3Aid%2Fremove%2F%3Asong__id-green)
 
 #### Responses:
 
