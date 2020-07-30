@@ -1,6 +1,6 @@
 # Spotify Song Suggester API
 
-<img src="https://img.shields.io/badge/made%20by-iatechristmas-blue?style=flat-square&logo=visual-studio-code"/>
+<img src="https://img.shields.io/badge/made%20by-iatechristmas-blue?style=flat-square&logo=visual-studio-code" unselectable="on"/>
 <p>
 <img src="https://img.shields.io/badge/bcrypt-2.4.3-blue"/>
 <img src="https://img.shields.io/badge/cors-2.8.5-blue"/>
@@ -16,6 +16,7 @@
 <img src="https://img.shields.io/badge/pg-8.3.0-blue"/>
 <img src="https://img.shields.io/badge/sqlite3-5.0.0-blue"/>
 <img src="https://img.shields.io/badge/supertest-4.0.2-blue"/>
+</p>
 
 ## API BASE URL
 
